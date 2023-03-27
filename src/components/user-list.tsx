@@ -1,6 +1,6 @@
 import { useAppSelector } from '../hooks';
 import CreateUser from './create-user';
-import Task from './user';
+import User from './user';
 
 const UserList = () => {
   const users = useAppSelector((state) => state.users.entities);
@@ -9,7 +9,7 @@ const UserList = () => {
     <section className="user-list">
       <CreateUser />
       {users.map((user) => (
-        <Task key={user.id} user={user} />
+        <User key={user.id} user={user} />
       ))}
     </section>
   );
